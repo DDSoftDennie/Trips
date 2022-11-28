@@ -4,7 +4,6 @@ using System.Collections;
 namespace Model
 {
    
-
     public class Trips
     {
         private List<Trip> _trips;
