@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33103.201
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{D205783F-DAED-4F3C-8924-906380E5E0EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Model", "Model\Model.csproj", "{D205783F-DAED-4F3C-8924-906380E5E0EC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhotoSharingApp", "PhotoSharingApp\PhotoSharingApp.csproj", "{A5965833-0A06-4B84-A275-8896F9980728}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{2D2EB26C-5E12-4A5E-95D0-F1174BC31E07}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{D205783F-DAED-4F3C-8924-906380E5E0EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D205783F-DAED-4F3C-8924-906380E5E0EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D205783F-DAED-4F3C-8924-906380E5E0EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5965833-0A06-4B84-A275-8896F9980728}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5965833-0A06-4B84-A275-8896F9980728}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5965833-0A06-4B84-A275-8896F9980728}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5965833-0A06-4B84-A275-8896F9980728}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D2EB26C-5E12-4A5E-95D0-F1174BC31E07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D2EB26C-5E12-4A5E-95D0-F1174BC31E07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D2EB26C-5E12-4A5E-95D0-F1174BC31E07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D2EB26C-5E12-4A5E-95D0-F1174BC31E07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
