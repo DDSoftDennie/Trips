@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Model", "Model\Model.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhotoSharingApp", "PhotoSharingApp\PhotoSharingApp.csproj", "{A5965833-0A06-4B84-A275-8896F9980728}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{2D2EB26C-5E12-4A5E-95D0-F1174BC31E07}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{2D2EB26C-5E12-4A5E-95D0-F1174BC31E07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model.MSTest", "Model.MSTest\Model.MSTest.csproj", "{1FCF134E-E6FA-4405-A942-39609BA2A29D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{2D2EB26C-5E12-4A5E-95D0-F1174BC31E07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D2EB26C-5E12-4A5E-95D0-F1174BC31E07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D2EB26C-5E12-4A5E-95D0-F1174BC31E07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FCF134E-E6FA-4405-A942-39609BA2A29D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FCF134E-E6FA-4405-A942-39609BA2A29D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FCF134E-E6FA-4405-A942-39609BA2A29D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FCF134E-E6FA-4405-A942-39609BA2A29D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

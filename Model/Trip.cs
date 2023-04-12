@@ -6,11 +6,19 @@ namespace Model
    
     public class Trips
     {
-        private List<Trip> _trips;
-        public Trips()
+
+        private readonly List<Trip> _trips;
+        public Trips(IEnumerable<Trip> trips)
         {
-            _trips = new List<Trip>();
+            _trips = new List<Trip>(trips);
         }
+
+        public IEnumerable<Trip> GetTrips()
+        {
+            return _trips;
+        }
+    
+    
         public void AddTrip(Trip trip)
         {
             if (trip != null)
@@ -25,11 +33,6 @@ namespace Model
                 _trips.AddRange(trips);
             else
                 throw new Exception();
-        }
-        
-        public IEnumerable<Trip> GetTrips()
-        {
-            return _trips;
         }
         
     }
