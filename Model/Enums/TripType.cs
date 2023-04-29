@@ -2,6 +2,7 @@
 {
     public enum TripType
     {
+        UNSET,
         Kerstmarkt,
         Kermis,
         Optreden,
