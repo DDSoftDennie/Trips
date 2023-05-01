@@ -1,17 +1,19 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using Model;
-using Model.Enums;
 using System.Text.Json;
 
 Console.WriteLine("Welcome to Jsonl Generator");
 Console.WriteLine("Currently Only working for 'Trips'");
-Console.WriteLine("Please give filePath to Trips.csv");
-string path = Console.ReadLine();
-var t = ReadFromCSV(path);
+Console.WriteLine("Please give folder with 'Trips.csv'");
+string? path = Console.ReadLine();
+if (path == null)
+{
+    throw new NullReferenceException();
+}
+string csvpath = path +  @"\Trips.csv";
+string savePath = path + @"\Trips";
 
-Console.WriteLine("Please give filePath to save jsonl");
-string savePath = Console.ReadLine();
-SaveJsonl(t, savePath);
+SaveJsonl(ReadFromCSV(csvpath), AddFileNameExtension(savePath));
 Console.WriteLine("Done");
 
 List<Trip> ReadFromCSV(string filePath)
@@ -26,24 +28,34 @@ List<Trip> ReadFromCSV(string filePath)
             var values = line?.Split(';');
             var t = new Trip();
 
-            if (values[0] == null)
+            if (values == null || values[0] == null)
                 throw new NullReferenceException();
             
-            // Process values here
             t.Date = DateOnly.Parse(values[0]);
             t.TripName = values[1];
             t.City = values[2];
             t.Country = values[3];
-
-
-            //TEMP
-            t.Type = TripType.UNSET;
-            //  t.Type = (TripType)Enum.Parse(typeof(TripType), values[4]);
+            t.Type = values[4];
+            
             trips.Add(t);
         }
         return trips;
     }
 }
+
+string AddFileNameExtension(string? filePath)
+{
+    if (filePath == null)
+    {
+        return new FileNotFoundException(filePath).Message;
+    }
+    
+    filePath +=$"_{DateTime.Now.Year}{DateTime.Now.Month}{DateTime.Now.Day}-{DateTime.Now.Hour}{DateTime.Now.Minute}{DateTime.Now.Second}";
+    filePath += ".jsonl";
+    return filePath;
+}
+
+
 
 void SaveJsonl(List<Trip> trips, string filePath)
 {

@@ -41,7 +41,7 @@ namespace Model
         public Trip()
         { }
         
-        public Trip(DateOnly date, string tripName, string city, string country, TripType type)
+        public Trip(DateOnly date, string tripName, string city, string country, string type)
         {
             Date = date;
             TripName = tripName;
@@ -55,7 +55,7 @@ namespace Model
         public string City { get; set; } = "";
         public string Country { get; set; } = "";
 
-        public TripType Type { get; set; }
+        public string Type { get; set; }
     }
 
 }
