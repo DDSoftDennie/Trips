@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhotoSharingApp", "PhotoSha
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{2D2EB26C-5E12-4A5E-95D0-F1174BC31E07}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Model.MSTest", "Model.MSTest\Model.MSTest.csproj", "{1FCF134E-E6FA-4405-A942-39609BA2A29D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsonlGenerator", "JsonlGenerator\JsonlGenerator.csproj", "{F7F747D4-50EA-48D2-94B0-585686200792}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonlGenerator", "JsonlGenerator\JsonlGenerator.csproj", "{F7F747D4-50EA-48D2-94B0-585686200792}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoSharingApp.Func", "PhotoSharingApp.Func\PhotoSharingApp.Func.csproj", "{98770EA7-1A3E-40F6-A8E3-27F7D6719393}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositories", "Repositories\Repositories.csproj", "{9A9666F8-DD96-416E-A8D9-AAB26749AA92}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,14 +33,18 @@ Global
 		{2D2EB26C-5E12-4A5E-95D0-F1174BC31E07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D2EB26C-5E12-4A5E-95D0-F1174BC31E07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D2EB26C-5E12-4A5E-95D0-F1174BC31E07}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1FCF134E-E6FA-4405-A942-39609BA2A29D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1FCF134E-E6FA-4405-A942-39609BA2A29D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1FCF134E-E6FA-4405-A942-39609BA2A29D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1FCF134E-E6FA-4405-A942-39609BA2A29D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F7F747D4-50EA-48D2-94B0-585686200792}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F7F747D4-50EA-48D2-94B0-585686200792}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7F747D4-50EA-48D2-94B0-585686200792}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7F747D4-50EA-48D2-94B0-585686200792}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98770EA7-1A3E-40F6-A8E3-27F7D6719393}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98770EA7-1A3E-40F6-A8E3-27F7D6719393}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98770EA7-1A3E-40F6-A8E3-27F7D6719393}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98770EA7-1A3E-40F6-A8E3-27F7D6719393}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A9666F8-DD96-416E-A8D9-AAB26749AA92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A9666F8-DD96-416E-A8D9-AAB26749AA92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A9666F8-DD96-416E-A8D9-AAB26749AA92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A9666F8-DD96-416E-A8D9-AAB26749AA92}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

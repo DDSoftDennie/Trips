@@ -1,4 +1,4 @@
-namespace DDAzure
+namespace Services
 {
     using Azure.Storage.Blobs;
     using System.Collections.Generic;
