@@ -5,16 +5,21 @@ namespace Repositories
 {
     public class PhotoRepository
     {
-        private List<Photo> Photos { get; set; }
+        private List<Photo>? Photos { get; set; }
+		private void InitPhotos()
+		{
+			Photos = new List<Photo>();
+		}
 
-        public PhotoRepository()
+		public PhotoRepository()
         {
-            Photos = new List<Photo>();
+            InitPhotos();
         }
         
+		
         public PhotoRepository(IEnumerable<TableEntity> photoTableEntities)
         {
-            
+            InitPhotos();
         }
 
         public PhotoRepository(List<string> fileNames)
@@ -27,18 +32,18 @@ namespace Repositories
         }
 
 
-        public Photo GetPhoto(string FileName) =>
+        public Photo? GetPhoto(string FileName) =>
                                                     Photos
-                                                    .FirstOrDefault(p => p.FileName == FileName);
-        public List<string> GetAllPhotoNames() =>
-                                                Photos.Select(p => p.FileName)
+                                                    ?.FirstOrDefault(p => p.FileName == FileName);
+        public List<string>? GetAllPhotoNames() =>
+                                                Photos?.Select(p => p.FileName)
                                                 .ToList();
 
-        public List<string> GetALLPhotoALTS() =>
-                                            Photos.Select(p => p.ALT)
+        public List<string?>? GetALLPhotoALTS() =>
+                                            Photos?.Select(p => p.ALT)
                                             .ToList();
 
-        public List<Photo> GetAllPhotos() => Photos.ToList();
+        public List<Photo>? GetAllPhotos() => Photos?.ToList();
 
         public void LoadPhoto(string fileName)
         {
@@ -52,8 +57,8 @@ namespace Repositories
                 Photos.Add(new Photo { FileName = fileName });
             }
         }
-
-        public TableEntity ToEntity(Photo p, string containerName, string startTrim, string endTrim)
+		
+        public static TableEntity ToEntity(Photo p, string containerName, string startTrim, string endTrim)
         {
             string partitionKey = containerName;
             string photoNum = p.FileName.TrimEnd(endTrim.ToCharArray());
@@ -61,11 +66,11 @@ namespace Repositories
             string rowKey = photoNum;
 
             var entity = new TableEntity(partitionKey, rowKey)
-        {
-            {"FileName", p.FileName},
-            {"URI", p.URI},
-            {"ALT", p.ALT}
-        };
+            {
+                {"FileName", p.FileName},
+                {"URI", p.URI},
+                {"ALT", p.ALT}
+            };
 
             return entity;
 
@@ -73,7 +78,7 @@ namespace Repositories
 
         public void Empty()
         {
-            Photos = null;
-        }
-    }
+            Photos?.Clear();
+		}
+	}
 }

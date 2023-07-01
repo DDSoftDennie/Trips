@@ -38,8 +38,8 @@ namespace Model
     }
     public class Trip
     {
-        public Trip()
-        { }
+        //public Trip()
+        //{ }
         
         public Trip(DateOnly date, string tripName, string city, string country, string type)
         {
